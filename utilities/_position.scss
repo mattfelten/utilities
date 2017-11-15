@@ -1,0 +1,16 @@
+.p-s { position: static; }
+.p-r { position: relative; }
+.p-a { position: absolute; }
+.p-f { position: fixed; }
+
+.p-t-0 { top: 0; }
+.p-r-0 { right: 0; }
+.p-b-0 { bottom: 0; }
+.p-l-0 { left: 0; }
+
+.p-fill {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+}

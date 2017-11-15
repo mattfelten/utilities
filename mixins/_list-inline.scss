@@ -1,0 +1,10 @@
+@mixin list-inline {
+	@include list-unset;
+
+	&,
+	li {
+		display: inline;
+	}
+}
+
+.list-inline { @include list-inline; }

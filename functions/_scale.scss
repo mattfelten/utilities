@@ -1,0 +1,33 @@
+// Sizing Scale Defaults
+// Declare these elsewhere ahead of this file to override
+$base-scale: 8 !default; // Goes in 8px increments
+$max-size: 16 !default; // Build 16 increments, 128px
+
+@mixin create-spacing-classes( $props, $class) {
+	@include create-spacing-class( #{$class}-0, $props, 0 );
+	@include create-spacing-class( #{$class}-half, $props, get-scale-px(.5) );
+	@include create-spacing-class( #{$class}-auto, $props, auto );
+	@for $i from 1 through $max-size {
+		@include create-spacing-class( #{$class}-#{$i}, $props, get-scale-px($i) );
+	}
+}
+
+@mixin create-spacing-class( $class, $props, $value ) {
+	.#{$class} {
+		@each $prop in $props {
+			#{$prop}: $value !important;
+		}
+	}
+}
+
+@function get-scale-rem($value) {
+	@return convert-px-to-rem($value * $base-scale);
+}
+
+@function get-scale-px($value) {
+	@return $value * $base-scale * 1px;
+}
+
+@function convert-px-to-rem($value) {
+	@return ($value / 15) * 1rem;
+}

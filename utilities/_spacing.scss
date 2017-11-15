@@ -1,0 +1,27 @@
+// All directions
+@include create-spacing-classes('margin', 'm');
+@include create-spacing-classes('padding', 'p');
+
+// Top
+@include create-spacing-classes('margin-top', 'm-t');
+@include create-spacing-classes('padding-top', 'p-t');
+
+// Right
+@include create-spacing-classes('margin-right', 'm-r');
+@include create-spacing-classes('padding-right', 'p-r');
+
+// Bottom
+@include create-spacing-classes('margin-bottom', 'm-b');
+@include create-spacing-classes('padding-bottom', 'p-b');
+
+// Left
+@include create-spacing-classes('margin-left', 'm-l');
+@include create-spacing-classes('padding-left', 'p-l');
+
+// X
+@include create-spacing-classes( ('margin-left', 'margin-right'), 'm-x');
+@include create-spacing-classes( ('padding-left', 'padding-right'), 'p-x');
+
+// Y
+@include create-spacing-classes( ('margin-top', 'margin-bottom'), 'm-y');
+@include create-spacing-classes( ('padding-top', 'padding-bottom'), 'p-y');
